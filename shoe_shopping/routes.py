@@ -16,10 +16,6 @@ def intro():
 def home():
     return render_template('home.html', title="Home")
 
-@app.route('/mens')
-def mens():
-    return render_template('mens.html', title="Men's shoes")
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
