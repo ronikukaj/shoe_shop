@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block styling %}
+<style>
+    @media only screen and (max-width: 700px){
+        .container > h1 > em{
+            font-size: 40px;
+        }
+        .container p{
+            font-size: 15px;
+        }
+        h3{
+            font-size: 25px;
+        }
+    }
+
+</style>
+{% endblock styling %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mt-4">
+            <div class="jumbotron jumbotron-fluid col-sm-12 rounded">
+                <div class="container">
+                    <h1 class="display-4 text-center"><em><u><a class="link text-dark" href="{{url_for('home')}}">shoeshopping.com</a></u></em></h1><br>
+                    <p class="lead text-center">Welcome to the number #1 shop to buy your shoes</p>
+                </div>
+            </div>
+        </div>
+        <hr><h3 class="text-center pb-3 pt-3">We have different choices for you</h3><hr>
+        <div class="row pt-3 pb-3 mb-3">
+            <div class="justify-content-center col-md-6 mt-1 mb-3">
+                <img src="{{ url_for('static', filename='pictures/sports_shoes.jpeg') }}" class="img-responsive img-thumbnail w-100 ml-1">
+            </div>
+            <div class="col-md-5">
+                <h3 class="ml-5 mb-2"> ~ Sports Shoes</h3>
+                <ul class="list-group ml-4">
+                    <li class="list-group-item">Durable</li>
+                    <li class="list-group-item">For athletes</li>
+                    <li class="list-group-item">Amazing quality</li>
+                    <li class="list-group-item">Comfort</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row pt-3 pb-3">
+            <div class="col-md-6 justify-content-center">
+                <h3 class="mr-5 mb-2"> ~ Formal Shoes</h3>
+                <ul class="list-group mr-4">
+                    <li class="list-group-item">Classy looking</li>
+                    <li class="list-group-item">The very best leather</li>
+                    <li class="list-group-item">Italian design</li>
+                    <li class="list-group-item">Any color</li>
+                </ul>
+            </div>
+            <div class="col-md-6 justify-content-center mb-1 mt-3">
+                <img src="{{ url_for('static', filename='pictures/formal_shoes.jpg') }}" class="img-responsive img-thumbnail w-100 ml-1">
+            </div>
+        </div>
+        <hr>
+        <div class="row pt-3 pb-3">
+            <div class="col-md-6 justify-content-center mt-1 mb-3">
+                <img src="{{ url_for('static', filename='pictures/casual_shoes.jpg') }}" class="img-responsive img-thumbnail w-100 ml-1">
+            </div>
+            <div class="col-md-5">
+                <h3 class="ml-5 mb-2"> ~ Casual Shoes</h3>
+                <ul class="list-group ml-4">
+                    <li class="list-group-item">Nr. #1 quality</li>
+                    <li class="list-group-item">For any kind of weather</li>
+                    <li class="list-group-item">Long lasting</li>
+                    <li class="list-group-item">Heavenly comfort</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
